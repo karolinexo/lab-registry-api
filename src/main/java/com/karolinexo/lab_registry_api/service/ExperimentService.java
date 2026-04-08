@@ -114,4 +114,11 @@ public class ExperimentService {
         return repository.findById(id)
                 .orElseThrow(() -> new ExperimentNotFoundException(id));
     }
+
+    public List<ExperimentSummaryResponse> findPeerReviewed(){
+        return repository.findByPeerReviewedTrue()
+                .stream()
+                .map(ExperimentSummaryResponse::from)
+                .toList();
+    }
 }
