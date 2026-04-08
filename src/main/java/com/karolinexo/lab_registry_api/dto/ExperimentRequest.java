@@ -21,7 +21,7 @@ public record ExperimentRequest (
 
         LocalDate startedAt,
 
-        Local concludedAt,
+        LocalDate concludedAt,
 
         @NotNull(message = "Peer reviewed status is required")
         Boolean peerReviewed
