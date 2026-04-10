@@ -35,6 +35,11 @@ public class GlobalExceptionHandler {
         return buildResponse(HttpStatus.BAD_REQUEST, message);
     }
 
+    @ExceptionHandler(IllegalAccessError.class)
+    public ResponseEntity<Map<String, Object>> handleIllegalState(IllegalStateException ex){
+        return buildResponse(HttpStatus.UNPROCESSABLE_ENTITY, ex.getMessage());
+    }
+
     private ResponseEntity<Map<String, Object>> buildResponse (HttpStatus status, String message){
         Map<String, Object> body = new HashMap<>();
         body.put("status", status.value());

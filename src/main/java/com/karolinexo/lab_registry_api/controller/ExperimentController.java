@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 @RestController
@@ -63,7 +64,8 @@ public class ExperimentController {
     }
 
     @PatchMapping("/{id}/status")
-    public ResponseEntity<ExperimentResponse> updateStatus (@PathVariable UUID id, @RequestBody Status newStatus){
+    public ResponseEntity<ExperimentResponse> updateStatus (@PathVariable UUID id, @RequestBody Map<String, String> body){
+        Status newStatus = Status.valueOf(body.get("status"));
         return ResponseEntity.ok(service.updateStatus(id, newStatus));
     }
 
