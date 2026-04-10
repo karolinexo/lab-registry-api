@@ -164,7 +164,7 @@ Organização por camada técnica seguindo o padrão MVC do Spring Boot.
 
 ## Métricas & insights
 
-Repositório público — acesse diretamente pelo GitHub:
+Acesse diretamente pelo GitHub:
 
 - **Pulse** (atividade recente): `Insights → Pulse`
 - **Commits ao longo do tempo**: `Insights → Graphs → Code frequency`
