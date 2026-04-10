@@ -1,3 +1,5 @@
+<div align="center">
+
 # 🧪 Lab Registry API
 
 > API REST para registro e gerenciamento do ciclo de vida de experimentos científicos históricos.
@@ -7,6 +9,8 @@
 ![H2](https://img.shields.io/badge/H2-Database-blue?style=flat-square)
 ![Maven](https://img.shields.io/badge/Maven-build-red?style=flat-square&logo=apachemaven)
 ![Architecture](https://img.shields.io/badge/Architecture-MVC-purple?style=flat-square)
+
+</div>
 
 ---
 
